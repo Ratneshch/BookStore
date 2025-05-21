@@ -8,7 +8,6 @@ A MERN stack application for browsing and managing books/courses, featuring user
 - Browse all books/courses and filter free courses
 - Responsive UI with React, Tailwind CSS, and DaisyUI
 - Protected routes for authenticated users
-- Carousel for featured/free courses
 - MongoDB for data storage
 
 ## Tech Stack
@@ -20,27 +19,28 @@ A MERN stack application for browsing and managing books/courses, featuring user
 
 ```
 Backend/
-  controller/
-  model/
-  route/
-  .env
-  index.js
-  package.json
+├── controller/        # Controllers handle business logic and route actions
+├── model/             # Database schemas/models (e.g., Book, User)
+├── route/             # API route definitions (e.g., bookRoutes.js, userRoutes.js)
+├── .env               # Environment variables for config (DB, secrets)
+├── index.js           # Main server entry point (Express app setup)
+└── package.json       # Backend dependencies and scripts
 
 Frontend/
-  public/
-  src/
-    components/
-    context/
-    courses/
-    home/
-    App.jsx
-    main.jsx
-    index.css
-  index.html
-  package.json
-  tailwind.config.js
-  vite.config.js
+├── public/            # Static assets (images, favicon, etc.)
+├── src/
+│   ├── components/    # Reusable React components (e.g., Header, BookCard)
+│   ├── context/       # React context for global state management
+│   ├── courses/       # If this is a bookstore, maybe rename this to something relevant? (e.g., pages/, features/)
+│   ├── home/          # Homepage related components or screens
+│   ├── App.jsx        # Root React component
+│   ├── main.jsx       # React DOM render & app bootstrap
+│   └── index.css      # Global styles including Tailwind directives
+├── index.html         # Main HTML file for the React app
+├── package.json       # Frontend dependencies and scripts
+├── tailwind.config.js # Tailwind CSS configuration
+└── vite.config.js     # Vite build & dev server config
+
 ```
 
 ## Getting Started
